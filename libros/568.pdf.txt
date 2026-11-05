@@ -1,0 +1,515 @@
+ “Sistema de planificación avanzada (APS) Aplicado a la Evaluación de 
+Inversiones en Activos Utilizando Herramientas Heurísticas y Simulación 
+Montecarlo” 
+ 
+Maria Lorena Heredia Silva 1, Catherine Patricia Pazmiño Barcia 2, Rosalyn Regina Ramos Lalangui 3, Pedro Fabricio 
+Echeverria Briones 4 
+ 
+1 Ingeniero en Computación Especialización Sistemas de Información 2005; email: lheredia@fiec.espol.edu.ec 
+2 Ingeniero en Computación Especialización Sistemas de Información 2005; email:cpazmino@ceibo.fiec.espol.edu.ec 
+3 Ingeniero en Computación Especialización Sistemas de Información 2005; email: rramos@ ceibo.fiec.espol.edu.ec  
+4 Director de Tópico, Ingeniero en Computación, Escuela Superior Politécnica del Litoral, 1998, Profesor de la Espol; 
+email: PEchever@uniplex.com.ec 
+ 
+Resumen 
+ 
+El presente proyecto tiene como propósito obtener alternativas óptimas en los factores principales que intervienen 
+en la compra de activos fijos. Este proceso considera fundamentalmente  los siguientes factores que intervienen en una 
+compra como: Alternativas de financiamiento, Acuerdos de Pago,  situación actual y Flujos de Utilidades proyectados 
+de la empresa. Tales factores están sujetos a incertidumbre y variabilidad, lo que implica un comportamiento dinámico 
+de las variables del problema. Debido a que es muy costoso realizar una inversión confiando solo en la estimación de 
+valores promedios y modas, se complementa el análisis de inversión usando Simulación Montecarlo y heurísticas para 
+la búsqueda de soluciones óptimas. 
+ 
+La Simulación Montecarlo es una herramienta poderosa que genera escenarios en los que intervienen el 
+comportamiento e impacto de variables del problema. La empresa considera muchas alternativas atractivas, pero debe 
+elegir la que mas se acople a su situación financiera y que brinde el mayor rendimiento, por consiguiente en un 
+conjunto inmenso de posibles combinaciones de factores determinantes son imprescindibles métodos heurísticas como 
+recocido simulado y algoritmo genético que brindan soluciones de buen rendimiento en tiempos computacionalmente 
+razonables. Como resultado el inversionista tendrá un panorama completo de alternativas posibles que lo conducirán 
+hacia mejores decisiones. 
+ 
+Palabras clave: Análisis de Inversión, Simulación Montecarlo, Variabilidad, Incertidumbre, Escenarios, Recocido 
+Simulado, Algoritmo Genético, Factores relacionados con la compra. 
+Abstract 
+ 
+This project has the purpose of getting profitable alternatives considering the principal factors that are involved 
+when a company makes investments in new assets. This process considers economical aspects such as financing 
+alternatives, payment alternatives, economical situation of the company and projected benefits. This factors has 
+variability and uncertainty, therefore the problem issues have a dynamic behavior. It is a great risk to invest trusting in 
+average values, thus, the analysis are complemented using Montecarlo Simulation and Heuristics to looking for optimal 
+solutions. 
+ 
+The MonteCarlo Simulation is a powerful tool that generates scenarios using the behavior and impact of the 
+problem issues. A company considers a lot of attractive alternatives, but  the economical analyst should choose the one 
+that fit to the company situation and brings the biggest profit, consequently, it is necessary to use heuristics methods 
+like  Annealing Simulated and Genetic Algorithm,  in a huge set of possible combinations of  factors, for getting good 
+solutions. As a result, the investor will have a complete vision of the possible financing and payment alternatives that 
+will take the company to the best choices. 
+ 
+Introducción 
+ 
+Un “APS  aplicado a la evaluación de inversiones en 
+activos utilizando herramientas heurísticas y simulación 
+Montecarlo” es una solución informática que ofrece una 
+visión del panorama  de los posibles escenarios que 
+puedan ocurrir y que afectarían el retorno de la compra 
+de activos, tomando en consideración el factor riesgo e 
+impacto implícito, que deberá ser evaluado utilizando 
+herramientas como análisis económico financiero, 
+estadísticas, simulación Montecarlo y búsqueda 
+heurística para ofrecer las mejores alternativas al 
+tomador de decisiones dentro de un amplia gama de 
+soluciones. 
+Esta solución tecnológica apoyara el proceso de toma 
+de decisiones a nivel estratégico, para asegurar que las 
+operaciones futuras de la empresa sean rentables. 
+Además, permitirá minimizar los costos de oportunidad 
+guiando a la gerencia hacia las mejores alternativas de 
+adquisiones tomando en cuenta las posibles fuentes de 
+financiamiento y formas de pago  en las que se puede 
+incurrir al momento de hacer la inversión efectiva. 
+Basado en la aplicación de métodos heurísticos de 
+búsqueda de entorno y simulación Montecarlo, se busca 
+predecir el posible comportamiento del retorno de la 
+inversión en un activo y lograr una optimización de los 
+factores de financiamientos y formas de pago que tienen 
+mayor impacto en el proceso de compra, midiendo la 
+rentabilidad de una inversión con su valor actual neto, 
+obtenido de proyectar los respectivos flujos de caja a un 
+momento presente. 
+Mediante la simulación de situaciones se trata de 
+disminuir la incertidumbre existente en el dominio del 
+problema, lo que disminuirá el riesgo. Se realiza análisis 
+económico-financieros sobre la  situación actual de la 
+empresa,  de manera que la evaluación de la inversión se 
+base además en la solvencia y liquidez con la que cuenta 
+la empresa antes de realizar la inversión. 
+Finalmente, el principal objetivo es brindar al 
+tomador de decisiones los posibles escenarios que la  
+empresa debería sostener si hiciere efectiva la inversión, 
+objeto principal de nuestro análisis. De esta manera, un 
+inversionista cuenta con una poderosa herramienta de 
+análisis que le permite contemplar los altos y bajos de 
+efectuar una inversión. 
+ 
+1. Definición del Problema y aplicación 
+ 
+El principal objetivo de realizar una inversión ha sido 
+y será obtener el mayor nivel de rentabilidad posible con 
+el menor riesgo. Para tratar de obtener esto, las empresas 
+realizan análisis económicos y financieros que permitan 
+de alguna manera estudiar el comportamiento de una 
+inversión y medir su rentabilidad antes de que ésta sea 
+realizada. 
+Este trabajo se centra en las inversiones en activos de 
+una compañía. Las empresas acumulan las utilidades 
+generadas durante varios periodos con el propósito de 
+invertir  en incrementos en niveles de producción y  a su 
+vez satisfacer una mayor demanda o simplemente 
+incrementar el patrimonio de la empresa,  para 
+consolidar su capital. En ambos casos, la reutilización de 
+la utilidades obtenidas en periodos anteriores es tomada 
+como una inversión que además de ser común involucra 
+un paso importante en el manejo administrativo y 
+contable de la empresa. 
+En el mercado existen herramientas financieras de 
+análisis a nivel de hardware, como calculadoras 
+financieras o a nivel de software como la tan utilizada y 
+conocida, Microsoft Excel. Dicha herramienta, involucra 
+que el usuario deba tener un conocimiento previo del uso 
+de funciones financieras además de tener que programar 
+las hojas de cálculo que esta herramienta utiliza para 
+poder realizar los análisis que desee. 
+Un “APS  aplicado a la evaluación de inversiones en 
+activos utilizando herramientas heurísticas y simulación 
+Montecarlo” simplifica de gran manera el trabajo del 
+tomador de decisiones, evitando que se vea involucrado 
+en programación o estudios previos para utilizar la 
+herramienta. Teniendo como datos de entrada al sistema 
+las distintas inversiones a ser analizadas y los distintos 
+financiamientos  y formas de pago que intervienen en 
+dichas inversiones. Cada financiamiento y forma de pago 
+consta de distintas coberturas que representan porciones 
+o porcentajes de la deuda total y sus respectivas 
+alternativas ya sea de financiamiento o de pago que el 
+mercado brinda al tomador de decisiones y servirán 
+como datos de entrada al análisis de la inversión. La 
+estructura de almacena de una inversión es representada 
+con la estructura de datos  de árbol y es ejemplificada 
+con la figura 1.1. El esquema general de la solución es 
+presentado en la figura 1.2 
+. 
+ 
+Figura 1.1 Estructura de una inversión 
+ 
+ 
+ 
+ 
+Figura 1.2 Esquema general de la solución 
+ 
+ 
+2. Aplicación de Recocido Simulado  
+ 
+Esta  estrategia heurística es utilizada para resolver 
+complejos problemas combinatorios, y cuya lógica 
+quedó establecida a inicios de la década de los 80. El 
+recocido simulado es un proceso computacional que 
+refleja los pasos establecidos en el proceso físico de 
+tratamiento térmico de materiales. En el recocido, por 
+ejemplo, un metal es llevado a elevados niveles 
+energéticos, hasta que alcanza su punto de fusión. 
+Luego, gradualmente es enfriado hasta alcanzar un 
+estado sólido, de mínima energía, previamente 
+definido. Por su naturaleza, este algoritmo debe ser 
+formulado como un descenso a valle en el que la 
+función objetivo es el nivel. 
+El algoritmo de recocido simulado pertenece una 
+clase de Algoritmos de búsqueda local (Local Search 
+Algorithms) comúnmente llamada Algoritmos de 
+Umbral [1]. 
+ 
+ 
+Figura2.1 Estructura de Soluciones para Recocido Simulado 
+ 
+El objetivo del algoritmo es obtener la combinación 
+de alternativas de pago y fuentes de financiamiento que 
+generen el mejor y más probable de los rendimientos o 
+flujos de utilidades.  La función de costo que maneja el 
+algoritmo Recocido simulado trabaja sobre los 
+resultados proporcionados por el Algoritmo genético, 
+lo cual implica una selección entre las soluciones 
+escogidas por el Algoritmo Genético  con base en la 
+solución candidata dada , para obtener el costo de cada 
+combinación de financiamiento y pago que constituyen 
+una solución candidata del recocido simulado. El costo 
+que se evalúa en cada iteración del algoritmo es el 
+VAN que se escoge de entre los VAN generados para 
+cada solución candidata, usando el concepto de 
+mediana dentro de una conjunto de datos. 
+Como criterio de parada se evaluara de acuerdo a un 
+criterio aleatorio dependiente de la temperatura, 
+numero máximo de combinaciones de alternativas de 
+financiamiento y pago   y VAN que representa el costo 
+de cada solución candidata. 
+ 
+3. Simulación Montecarlo 
+ 
+En nuestro proyecto se utiliza el método de 
+simulación llamado algoritmo Montecarlo para lograr 
+estimaciones reales de las alternativas de 
+financiamientos y alternativas de pago que el usuario 
+Entrada 
+Inversi
+ón 
+(Árbol 
+Situaci
+ón 
+Actual 
+Anál
+isis 
+Optim
+izació
+n: 
+Simul
+ación 
+Monte
+Optim
+izació
+n: 
+Fuente de 
+Financiamient
+o Óptima 
+Proceso Salida 
+Inv
+F F P P
+C
+F
+C
+F
+C
+P
+C
+P
+A
+F
+A
+F
+A
+P
+A
+P
+F =  Fuente 
+de 
+financiamien
+to 
+ 
+P = Forma de 
+pago 
+ 
+CF = 
+Cobertura de 
+financiamien
+to 
+desea evaluar y no con valores promedios que tienen 
+un gran riesgo y son poco realistas. La simulación 
+Montecarlo es una metodología mediante la cual se 
+procesa la incertidumbre de las principales variables 
+proyectadas en un modelo de pronósticos, a fin de 
+estimar el impacto del  riesgo sobre los resultados 
+proyectados. También se puede decir que es una 
+técnica mediante la cual el modelo matemático esta 
+sujeto a varias ejecuciones de simulación, usualmente 
+con la ayuda de una computadora[2]. 
+Para el desarrollo de este análisis con la combinación 
+de Forma de Financiamiento y Forma de Pago que el 
+Recocido Simulado obtuvo. Primero, se genera un 
+Estado de Resultados utilizando la distribución y 
+parámetros que el usuario ingreso anteriormente de 
+cada cuenta que intervenga en el y en el Balance 
+General, como lo muestra la  Tabla 3.1, generando 
+valores puntuales dependiendo su distribución. Además 
+se crean nuevas cuentas que representan la adquisición 
+ficticia del activo (cuentas de depreciación del activo, 
+gastos de instalación,  cuenta que represente el gasto 
+depreciación del activo y gastos adicionales) y los 
+incrementos en ventas y gastos que se generarían al 
+introducir ese nuevo activo a la Producción. 
+ 
+Cuenta Distribución Parámetros 
+Gtos. Servicio 
+Básicos 
+Triangular A:97  B:98 C: 99 
+Gtos. de Envió Triangular A:106 B:107 C: 108 
+Tabla 3.1 Ejemplo de cuentas con distribución y sus 
+parámetros 
+ 
+A continuación se  generan en la simulación los 
+valores puntuales para el interés, plazo y Porcentaje de 
+Descuento de  la alternativa de financiamiento, cada 
+una de las cuales posee una distribución con sus 
+respectivos parámetros que fueron ingresados 
+anteriormente, lo mismo ocurre para la alternativa de 
+pago. 
+Tanto el Flujo de Efectivo, La formas de 
+financiamiento y la forma de Pago con valores 
+puntuales forman un escenario, se generaran máximo 
+10 escenarios y estos serán datos de entrada para el 
+siguiente método heurística que es el Algoritmo 
+Genético, el cual evaluara cual es el mejor escenario, 
+esto se realizara dependiendo la cantidad total de 
+escenarios que haya  indicado  el usuario. 
+Con esto se le permitirá evaluar la mayor cantidad de 
+posibles escenarios de un gran  espacio de posibles 
+resultados. Esto lo hace una herramienta muy útil ya 
+que por medio del análisis  del VAN de los escenarios 
+y herramientas estadísticas el tomador de decisiones 
+podrá evaluar el comportamiento que tendrá la 
+inversión.  
+A continuación se  generan en la simulación los 
+valores puntuales para el interés, plazo y Porcentaje de 
+Descuento de  la alternativa de financiamiento, cada 
+una de las cuales posee una distribución con sus 
+respectivos parámetros que fueron ingresados 
+anteriormente, lo mismo ocurre para la alternativa de 
+pago. 
+Tanto el Flujo de Efectivo, La formas de 
+financiamiento y la forma de Pago con valores 
+puntuales forman un escenario, se generaran máximo 
+10 escenarios y estos serán datos de entrada para el 
+siguiente método heurística que es el Algoritmo 
+Genético, el cual evaluara cual es el mejor escenario, 
+esto se realizara dependiendo la cantidad total de 
+escenarios que haya  indicado  el usuario. 
+Con esto se le permitirá evaluar la mayor cantidad de 
+posibles escenarios de un gran  espacio de posibles 
+resultados. Esto lo hace una herramienta muy útil ya 
+que por medio del análisis  del VAN de los escenarios 
+y herramientas estadísticas el tomador de decisiones 
+podrá evaluar el comportamiento que tendrá la 
+inversión.  
+ 
+4. Aplicación de Algoritmo Genético 
+ 
+Los algoritmos genéticos son métodos sistemáticos 
+para la resolución de problemas de búsqueda y 
+optimización que aplican a estos los mismos métodos 
+de la evolución biológica: selección basada en la 
+población, reproducción sexual y mutación [3]. Se 
+implementa bajo el uso de las siguientes estructuras: 
+• Generación: formada por n cromosomas 
+• Cromosoma: formada por n genes 
+• Gen: dato simple de información 
+• Fitness: función de rendimiento de un 
+cromosoma. 
+En la optimización de los factores de las fuentes de 
+financiamiento (interés, plazo, periodo, descuento) y 
+los factores de las formas de pago (interés, plazo, 
+periodo, descuento) el procesamiento del algoritmo 
+genético se encarga de encontrar cual es la 
+combinación de fuente de financiamiento y forma de 
+pago que brinde mayor rentabilidad a la inversión 
+utilizando los valores generados con la simulación 
+montecarlo para las variables o factores de 
+financiamiento y pago antes mencionados y los flujos 
+de utilidad proyectados. 
+Un cromosoma esta conformado de la siguiente 
+manera: 
+Cromosoma = (Fuente Financiamiento, Forma Pago, 
+Flujo de Utilidad) 
+El algoritmo genético recibe como datos de entrada 
+10 cromosomas iniciales, a los cuales se evalúa el 
+fitness o rendimiento. Este valor es obtenido con el 
+cálculo del valor actual neto del flujo de efectivo que 
+representa el cromosoma (Figura4.1). Los ingresos 
+periódicos del flujo de efectivo son las utilidades 
+proyectadas y los egresos son las anualidades 
+respectivas de la fuente de financiamiento y forma de 
+pago que esta siendo evaluada. Obteniendo el valor 
+actual de los ingresos y el valor actual de los egresos y 
+sacando su diferencia, da como resultado el valor 
+actual neto o rendimiento del cromosoma. 
+Como siguiente paso, se realiza un cruzamiento 
+entre los cromosomas de la generación actual, de 
+manera que se explore el espacio de soluciones, donde 
+en un cruzamiento entre el cromosoma C1 y C2 se 
+generan cuatro nuevos cromosomas que serán añadidos 
+a la generación actual al mismo tiempo que son 
+evaluados por la función de fitness. 
+Para crear una nueva generación se seleccionara a 
+los diez cromosomas que posean el mayor fitness de 
+entre todos los cromosomas existentes en la población. 
+El algoritmo genético se ejecutara hasta que el 
+coeficiente de variación entre los cromosomas 
+existentes dentro de la generación sea menor al 0.5. 
+La solución final será aquel cromosoma de la ultima 
+generación que tenga el mayor fitness o sea que sea el 
+flujo de efectivo (utilidades, financiamiento y pago) 
+que brinde mayor rentabilidad a la inversión. 
+ 
+ 
+ 
+Figura 4.1 Esquema del Flujo de Efectivo 
+ 
+5. Resultados Obtenidos  
+ 
+Con la implementación de este proyecto se han  
+obtenido mejoras notables en los resultados 
+proporcionados por el sistema, debido a que ofrece 
+información mas completa que estaba siendo omitida 
+cuando solo se tomaba en consideración valores 
+promedios. 
+Gracias al empleo de dos métodos heurísticas se 
+mejoro el performance del sistema, con respecto a 
+tiempos de respuesta debido a que no se realiza una 
+exploración exhaustiva del conjunto de posibles 
+soluciones el cual es muy extenso debido a la gran 
+cantidad de escenarios generados en base al criterio a 
+los parámetros ingresados por el usuario que pueden 
+provenir de un experto o ser ajustado por el método de 
+bondad de ajuste a partir de información histórica 
+existente.  
+El papel del a simulación es muy importante y 
+también demanda poder de procesamiento ya que con 
+la información proporcionada debe generar escenarios 
+que luego serán filtrados hacia los que son mas 
+frecuentes y por lo tanto mas probables , de esta 
+manera se obtiene una mayor cobertura de casos 
+posibles. 
+En cuanto a restricciones los escenarios generados 
+respetan los coeficientes de correlación entre variables 
+para evitar escenarios inconsistentes,  mientras que el 
+algoritmo genético utiliza el criterio de ratios 
+financieros para penalizar soluciones que n osean 
+factibles para la situación actual de la empresa. De este 
+modo se eliminan inconsistencias. 
+Finalmente una solución flexible y robusta ha sido 
+desarrollada con el fin de apoyar la toma de decisiones 
+en la evaluación de inversiones. 
+ 
+0 
+U1 
+P1 
+F1 
+U2 Un U3 
+P2 
+F2 
+Pm 
+Fp 
+U = Flujo de Utilidad 
+F = flujo de financiamiento 
+P = flujo de pago 
+6. Conclusiones 
+ 
+Basado en la investigación y los resultados obtenidos 
+en este proyecto, podemos mencionar  las siguientes 
+conclusiones: 
+ 1) El sistema  puede adaptar a situaciones reales que el 
+inversionista se pueda enfrentar como diferentes 
+alternativas de forma de financiamiento y diversas 
+alternativas de  forma de pagos con valores que pueden 
+variar y no siempre se mantienen constantes.  
+2) Dado que el espacio de búsqueda es amplio la 
+aplicación de los métodos heurísticas escogidos 
+disminuyen de forma significativa el tiempo de 
+respuesta, además de que siempre trata de buscar las 
+mejores soluciones y  que se han lo mas reales 
+posibles. 
+3) El Recocido Simulado nos permite realizar una 
+exploración más rápida de todas las posibles 
+combinaciones de forma de pago y financiamiento con 
+el fin de obtener de la mejor combinación el escenario 
+más probable de la inversión valiéndose del Algoritmo 
+Genético. 
+4) La Simulación Montecarlo nos  permite trabajar con 
+distribuciones y de esa manera estimar el impacto del 
+riesgo y tener una mejor percepción de los posibles 
+escenarios que se pueden presentar. 
+5) El Algoritmo Genético busca el mayor rendimiento 
+de los escenarios que tienen una forma de pago y 
+financiamiento con valores puntuales. 
+Para realizar las pruebas hemos utilizado datos 
+contables como Estados de Resultados y Balances 
+Generales y datos de la producción como la oferta y 
+demanda de la empresa SilvariHogar una empresa 
+dedicada a la producción y distribución de productos 
+de limpieza en el Ecuador. 
+ 
+Agradecimientos 
+ 
+Todo comenzó con sueño y acabo en un sistema útil 
+y robusto,  en medio de ciento de horas de 
+programación, investigación y estudio además de 
+largas horas de discusión y muchos momentos 
+divertidos. Las autoras deseamos manifestar en primer 
+lugar un agradecimiento especial a Dios ya que sin el 
+no hubiera sido posible culminar este trabajo. 
+ A nuestras Familias que fueron un pilar fundamental 
+dándonos su apoyo incondicional y amor  no solo 
+durante el transcurso de este proyecto sino durante toda 
+nuestra carrera. 
+También quisiéramos mostrar nuestro 
+agradecimiento a la Escuela Superior Politécnica del 
+Litoral (ESPOL), por el conocimiento impartido 
+durante nuestra preparación académica que hizo 
+posible realizar un trabajo de calidad. 
+ 
+Referencias 
+a) Referencias de Internet 
+ 
+[1] Artículo: Inteligencia Artificial  por Faustino 
+Peraza  Rodríguez  
+http://www.monografias.com/trabajos10/trabajos/trabaj
+os.shtm 
+[3] Informática Evolutiva: Algoritmos Genéticos por 
+Juan Julián Merelo Guervós 
+http://geneura.ugr.es/~jmerelo/ie/ags.htm 
+ 
+b) Articulo de una publicación 
+ 
+[2] Evaluación de Riesgo mediante Simulación 
+Montecarlo por Alejandro Bustamante Pág. 6,7 
+ 
+ 
+ 
+ 
